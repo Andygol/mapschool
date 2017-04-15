@@ -102,7 +102,7 @@ The most common way to store places on Earth is with latitude and longitude valu
 
 **Latitude** values range from -90 at the South Pole to 90 at the North Pole. All along the equator the latitude value is 0.
 
-**Longitude** values range from -180 to 180, and the line where these meet, which cuts through the Pacific in north/south direction, is called the antemeridian. The value of 0 is defined as the Prime Meridian, which cuts through Africa and Europe (specifically the Royal Observatory, in Greenwich, London).
+**Longitude** values range from -180 to 180, and the line where these meet, which cuts through the Pacific in north/south direction, is called the antimeridian. The value of 0 is defined as the Prime Meridian, which cuts through Africa and Europe (specifically the Royal Observatory, in Greenwich, London).
 
 The combination of latitude and longitude is usually called a coordinate, and can be represented as 'latitude, longitude', or 'longitude, latitude': historically, the former was standard, but 'longitude, latitude' has recently gained popularity because it mirrors the 'X, Y' ordering of coordinates in math's euclidean space.
 
@@ -206,10 +206,18 @@ Interpolation looks at the values around the 'blanks' and assumes that the missi
 
 There are many ways to interpolate point data:
 
-- **Heatmaps** assign each point a weight and represent density of point values in "hotter" colors.
+![](img/voronoi.png)
+
+**Voronoi diagrams** take a set of points and turn them into polygons of all of the area around them.
+This example [is of airports](https://www.jasondavies.com/maps/voronoi/airports/).
+
+![](img/heatmap.png)
+
+**Heatmaps** assign each point a weight and represent density of point values in "hotter" colors.
+This example is [from the Leaflet.heat plugin for web maps](https://github.com/Leaflet/Leaflet.heat).
+
 - **Contour lines** take point sample data and draw lines around them that represent a continuous estimated value. Elevation maps often use this technique.
 - A **TIN** (Triangulated Irregular Network) draws triangles between points that can be used to visualize terrains.
-- **Voronoi diagrams** take a set of points and turn them into polygons of all of the area around them.
 
 ## Afterword
 
